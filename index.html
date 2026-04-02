@@ -3,167 +3,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DNVR Concrete LLC | Denver's Premier Concrete Contractor</title>
-    <meta name="description" content="5-Star rated, family-owned concrete experts in Denver. Specializing in Patios, Driveways, Sidewalks, and Custom Concrete.">
+    <title>DNVR Concrete LLC | Denver's Trusted Concrete Experts</title>
+    <meta name="description" content="5-Star rated, family-owned concrete contractor in Denver. Specializing in high-quality patios, driveways, and custom concrete solutions.">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; }
-        h1, h2, .brand-font { font-family: 'Montserrat', sans-serif; }
-        .concrete-gradient { background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%); }
-        .accent-orange { color: #f6ad55; }
-        .bg-accent-orange { background-color: #f6ad55; }
-        .broken-grid-img { clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%); }
+        :root {
+            --brand-slate: #1e293b;
+            --brand-orange: #f97316;
+        }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        h1, h2, h3, .nav-link { font-family: 'Outfit', sans-serif; }
+        
+        /* Subtle transition for interactive elements */
+        .hover-lift { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+        .hover-lift:hover { transform: translateY(-2px); shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1); }
+        
+        /* Mobile-responsive image shapes */
+        .hero-clip { clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%); }
+        @media (min-width: 1024px) {
+            .hero-clip { clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%); }
+        }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900">
+<body class="bg-slate-50 text-slate-800 antialiased">
 
-    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+    <header class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-20 items-center">
-                <div class="flex items-center gap-2">
-                    <div class="w-12 h-12 bg-slate-800 flex items-center justify-center rounded-lg shadow-lg">
-                        <span class="text-white font-black text-xl tracking-tighter">DNVR</span>
+            <div class="flex justify-between items-center h-16 md:h-20">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-slate-900 flex items-center justify-center rounded-md shadow-sm">
+                        <span class="text-white font-black text-sm tracking-tighter italic">DNVR</span>
                     </div>
-                    <span class="brand-font text-2xl tracking-tighter font-black hidden sm:block">CONCRETE <span class="accent-orange">LLC</span></span>
+                    <div class="flex flex-col leading-none">
+                        <span class="font-black text-lg md:text-xl tracking-tight uppercase">Concrete <span class="text-orange-600">LLC</span></span>
+                        <span class="text-[10px] font-bold text-slate-500 uppercase tracking-widest hidden sm:block">Family Owned & Operated</span>
+                    </div>
                 </div>
-                <div class="hidden md:flex space-x-8 font-semibold text-sm uppercase tracking-widest">
-                    <a href="#services" class="hover:text-orange-500 transition">Services</a>
-                    <a href="#about" class="hover:text-orange-500 transition">About</a>
-                    <a href="#contact" class="hover:text-orange-500 transition">Contact</a>
-                </div>
-                <a href="tel:7202431972" class="bg-slate-900 text-white px-6 py-3 rounded-full font-bold text-sm hover:bg-orange-500 transition shadow-xl">
-                    (720) 243-1972
+
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-bold uppercase tracking-wider">
+                    <a href="#services" class="hover:text-orange-600 transition">Services</a>
+                    <a href="#about" class="hover:text-orange-600 transition">About</a>
+                    <a href="#contact" class="hover:text-orange-600 transition">Contact</a>
+                </nav>
+
+                <a href="tel:7202431972" class="bg-orange-600 text-white px-5 py-2.5 rounded-full font-bold text-sm hover:bg-slate-900 transition shadow-lg shadow-orange-200">
+                    Call (720) 243-1972
                 </a>
             </div>
         </div>
-    </nav>
+    </header>
 
-    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <span class="inline-block py-1 px-3 rounded-full bg-orange-100 text-orange-700 text-xs font-bold uppercase tracking-widest mb-4">
-                        ⭐ 5-Star Rated by Local Homeowners
-                    </span>
-                    <h1 class="text-6xl lg:text-8xl font-black leading-none mb-6">
-                        BUILDING <br><span class="text-slate-400">DENVER'S</span> <br><span class="accent-orange">FOUNDATION.</span>
+    <section class="relative pt-24 pb-16 lg:pt-44 lg:pb-32 overflow-hidden bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+                <div class="w-full lg:w-1/2 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 bg-slate-100 rounded-full mb-6">
+                        <span class="flex h-2 w-2 rounded-full bg-green-500 animate-pulse"></span>
+                        <span class="text-xs font-bold text-slate-600 uppercase tracking-widest">Accepting New Projects in Denver</span>
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 leading-[1.1] mb-6">
+                        Reliable Concrete <br class="hidden md:block"> For Your <span class="text-orange-600 italic">Next</span> Project.
                     </h1>
-                    <p class="text-lg text-slate-600 mb-8 max-w-lg">
-                        Family-owned and operated. We specialize in high-durability patios, driveways, and custom concrete work designed to withstand the Colorado elements.
+                    <p class="text-base md:text-lg text-slate-600 mb-8 max-w-xl mx-auto lg:mx-0 font-medium">
+                        Patios, driveways, and custom sidewalks built to last. We combine local Denver expertise with 5-star service to bring your vision to life.
                     </p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="#contact" class="bg-slate-900 text-center text-white px-8 py-4 rounded-lg font-bold text-lg hover:scale-105 transition-transform shadow-2xl">
+                    <div class="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
+                        <a href="#contact" class="w-full sm:w-auto bg-slate-900 text-white px-8 py-4 rounded-xl font-bold text-base hover:shadow-xl transition-all hover:-translate-y-1">
                             Get a Free Quote
                         </a>
-                        <div class="flex items-center gap-3 px-4 py-2 border-l-4 border-orange-400 bg-white shadow-sm">
-                            <span class="font-bold">Text "READY" to:</span>
-                            <a href="sms:+17202431972" class="font-black text-xl hover:text-orange-600 transition tracking-tighter">(720) 243-1972</a>
-                        </div>
+                        <a href="sms:+17202431972" class="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-4 border-2 border-slate-200 rounded-xl font-bold text-base hover:bg-slate-50 transition">
+                            Text <span class="text-orange-600">"READY"</span>
+                        </a>
                     </div>
                 </div>
-                <div class="relative">
-                    <div class="absolute -top-10 -left-10 w-64 h-64 bg-orange-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
-                    <img src="https://images.unsplash.com/photo-1590059536034-75127027d75c?auto=format&fit=crop&q=80&w=1000" alt="Modern Concrete Patio" class="rounded-2xl shadow-2xl broken-grid-img relative z-10">
+                <div class="w-full lg:w-1/2">
+                    <div class="relative group">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-orange-400 to-slate-400 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
+                        <img src="https://images.unsplash.com/photo-1590059536034-75127027d75c?auto=format&fit=crop&q=80&w=1200" 
+                             alt="Professional Concrete Patio Work" 
+                             class="relative rounded-2xl shadow-2xl hero-clip object-cover h-[300px] md:h-[450px] w-full">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="services" class="py-24 bg-slate-900 text-white">
+    <section id="services" class="py-20 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="mb-16 text-center">
-                <h2 class="text-4xl font-black mb-4 tracking-tight">OUR EXPERTISE</h2>
-                <div class="h-1 w-20 bg-accent-orange mx-auto"></div>
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+                <div class="max-w-xl">
+                    <h2 class="text-3xl md:text-4xl font-black text-slate-900 mb-4 uppercase tracking-tighter">Our Core Services</h2>
+                    <p class="text-slate-600 font-medium">Expert concrete installation across the Mile High area. Residential & commercial specialists.</p>
+                </div>
+                <div class="h-1 w-24 bg-orange-600 hidden md:block"></div>
             </div>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="group bg-slate-800 p-8 rounded-2xl hover:bg-orange-500 transition-all duration-500 cursor-default shadow-lg">
-                    <div class="text-4xl mb-4 group-hover:scale-110 transition">🏗️</div>
-                    <h3 class="text-2xl font-bold mb-2 uppercase">Patios</h3>
-                    <p class="text-slate-400 group-hover:text-white transition">Custom outdoor living spaces designed for the Denver lifestyle.</p>
+
+            <div class="grid md:grid-cols-3 gap-6 lg:gap-10">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover-lift">
+                    <div class="w-12 h-12 bg-orange-50 rounded-lg flex items-center justify-center mb-6">
+                        <span class="text-2xl">🏗️</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Custom Patios</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Turn your backyard into an oasis with decorative or standard concrete patios designed for entertainment.</p>
                 </div>
-                <div class="group bg-slate-800 p-8 rounded-2xl hover:bg-orange-500 transition-all duration-500 cursor-default shadow-lg">
-                    <div class="text-4xl mb-4 group-hover:scale-110 transition">🚗</div>
-                    <h3 class="text-2xl font-bold mb-2 uppercase">Driveways</h3>
-                    <p class="text-slate-400 group-hover:text-white transition">Heavy-duty, reinforced concrete built to last through freeze-thaw cycles.</p>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover-lift">
+                    <div class="w-12 h-12 bg-orange-50 rounded-lg flex items-center justify-center mb-6">
+                        <span class="text-2xl">🚗</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Driveways</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Heavy-duty, high-psi concrete mixtures ensuring your driveway stands up to Colorado winters.</p>
                 </div>
-                <div class="group bg-slate-800 p-8 rounded-2xl hover:bg-orange-500 transition-all duration-500 cursor-default shadow-lg">
-                    <div class="text-4xl mb-4 group-hover:scale-110 transition">✨</div>
-                    <h3 class="text-2xl font-bold mb-2 uppercase">Custom Work</h3>
-                    <p class="text-slate-400 group-hover:text-white transition">Sidewalks, steps, and decorative concrete tailored to your home.</p>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover-lift">
+                    <div class="w-12 h-12 bg-orange-50 rounded-lg flex items-center justify-center mb-6">
+                        <span class="text-2xl">📏</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Sidewalks & Steps</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Precision leveling and safety-first walkways for your property, from curb to front door.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="about" class="py-24 overflow-hidden">
+    <section id="about" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col lg:flex-row gap-16 items-center">
-                <div class="lg:w-1/2">
-                    <h2 class="text-5xl font-black mb-8 leading-tight">LOCAL. FAMILY-OWNED. <br><span class="text-slate-400">DENVER PROUD.</span></h2>
-                    <p class="text-lg text-slate-600 mb-6">
-                        DNVR Concrete LLC isn't just another contractor. We're your neighbors. We understand that in Colorado, concrete needs to be more than just pretty—it needs to be durable. 
-                    </p>
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="order-2 lg:order-1">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-slate-900 text-white p-6 rounded-2xl text-center">
+                            <span class="block text-3xl font-black mb-1">5.0</span>
+                            <span class="text-[10px] uppercase font-bold tracking-widest text-slate-400">Star Rated</span>
+                        </div>
+                        <div class="bg-orange-600 text-white p-6 rounded-2xl text-center">
+                            <span class="block text-3xl font-black mb-1">24/7</span>
+                            <span class="text-[10px] uppercase font-bold tracking-widest text-orange-200">Availability</span>
+                        </div>
+                    </div>
+                    <div class="mt-4 bg-slate-100 h-64 rounded-2xl flex items-center justify-center overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1541888946425-d81bb1930060?auto=format&fit=crop&q=80&w=800" alt="Workmanship" class="w-full h-full object-cover opacity-80">
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <h2 class="text-3xl md:text-4xl font-black mb-6 uppercase tracking-tight">Denver’s Choice For <span class="text-orange-600">Hardscaping</span></h2>
+                    <p class="text-slate-600 mb-6 font-medium">As a family-owned local business, we don't just pour concrete—we build foundations for our community. We handle every project with the precision your home deserves.</p>
                     <ul class="space-y-4">
-                        <li class="flex items-center gap-3 font-bold">
-                            <span class="text-orange-500">✓</span> Always Open & Ready to Work
+                        <li class="flex items-center gap-3 font-bold text-sm">
+                            <span class="w-6 h-6 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-xs">✓</span> Fully Insured & Licensed
                         </li>
-                        <li class="flex items-center gap-3 font-bold">
-                            <span class="text-orange-500">✓</span> Precision Engineering for Every Pour
+                        <li class="flex items-center gap-3 font-bold text-sm">
+                            <span class="w-6 h-6 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-xs">✓</span> Family Owned/Operated Values
                         </li>
-                        <li class="flex items-center gap-3 font-bold">
-                            <span class="text-orange-500">✓</span> Serving Denver & Surrounding Areas
+                        <li class="flex items-center gap-3 font-bold text-sm">
+                            <span class="w-6 h-6 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-xs">✓</span> Serving All Surrounding Denver Suburbs
                         </li>
                     </ul>
                 </div>
-                <div class="lg:w-1/2 grid grid-cols-2 gap-4">
-                    <div class="bg-white p-6 shadow-xl rounded-xl text-center border-t-4 border-orange-500">
-                        <span class="block text-4xl font-black">5.0</span>
-                        <span class="text-xs uppercase font-bold text-slate-500">Average Rating</span>
-                    </div>
-                    <div class="bg-white p-6 shadow-xl rounded-xl text-center border-t-4 border-slate-900">
-                        <span class="block text-4xl font-black">100%</span>
-                        <span class="text-xs uppercase font-bold text-slate-500">Family Owned</span>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="py-24 concrete-gradient text-white">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <h2 class="text-5xl font-black mb-4 tracking-tighter">READY FOR A QUOTE?</h2>
-            <p class="text-slate-400 mb-12">DM "READY" to us or fill out the form below. We'll get back to you within 24 hours.</p>
+    <section id="contact" class="py-20 bg-slate-900 text-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-black mb-4 tracking-tighter uppercase">Start Your Project</h2>
+                <p class="text-slate-400">Fill out the form or text <span class="text-white font-bold">READY</span> to <a href="tel:7202431972" class="text-orange-500 underline underline-offset-4">(720) 243-1972</a></p>
+            </div>
             
-            <form action="#" class="grid md:grid-cols-2 gap-6 text-left">
-                <input type="text" placeholder="Your Name" class="bg-slate-800 border border-slate-700 p-4 rounded-lg focus:outline-none focus:border-orange-500 transition">
-                <input type="email" placeholder="Email Address" class="bg-slate-800 border border-slate-700 p-4 rounded-lg focus:outline-none focus:border-orange-500 transition">
-                <input type="tel" placeholder="Phone Number" class="bg-slate-800 border border-slate-700 p-4 rounded-lg focus:outline-none focus:border-orange-500 transition">
-                <select class="bg-slate-800 border border-slate-700 p-4 rounded-lg focus:outline-none focus:border-orange-500 transition">
-                    <option>Patio Project</option>
-                    <option>Driveway Replacement</option>
-                    <option>Sidewalk/Walkway</option>
-                    <option>Other Custom Work</option>
+            <form action="#" class="grid md:grid-cols-2 gap-4">
+                <input type="text" placeholder="Name" class="w-full bg-slate-800 border border-slate-700 p-3.5 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 transition text-sm">
+                <input type="tel" placeholder="Phone Number" class="w-full bg-slate-800 border border-slate-700 p-3.5 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 transition text-sm">
+                <select class="w-full bg-slate-800 border border-slate-700 p-3.5 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 transition text-sm md:col-span-2">
+                    <option>Select Project Type</option>
+                    <option>Patio</option>
+                    <option>Driveway</option>
+                    <option>Sidewalk / Steps</option>
+                    <option>Other / Custom</option>
                 </select>
-                <textarea placeholder="Tell us about your project..." class="md:col-span-2 bg-slate-800 border border-slate-700 p-4 rounded-lg h-32 focus:outline-none focus:border-orange-500 transition"></textarea>
-                <button class="md:col-span-2 bg-orange-500 text-white font-black py-5 rounded-lg text-xl hover:bg-orange-600 transition-colors uppercase tracking-widest shadow-2xl">
-                    Submit Project Request
+                <textarea placeholder="Tell us about your space..." class="w-full bg-slate-800 border border-slate-700 p-3.5 rounded-lg h-28 focus:outline-none focus:ring-2 focus:ring-orange-500 transition text-sm md:col-span-2"></textarea>
+                <button class="md:col-span-2 bg-orange-600 hover:bg-orange-500 text-white font-black py-4 rounded-lg transition-all uppercase tracking-widest text-sm shadow-xl">
+                    Get My Free Estimate
                 </button>
             </form>
         </div>
     </section>
 
-    <footer class="bg-white py-12 border-t border-slate-200">
+    <footer class="bg-white py-12 border-t border-slate-100">
         <div class="max-w-7xl mx-auto px-4 text-center">
-            <div class="brand-font text-3xl font-black tracking-tighter mb-4">DNVR CONCRETE <span class="accent-orange">LLC</span></div>
-            <p class="text-slate-500 font-bold mb-6">📍 Denver, CO | (720) 243-1972</p>
-            <div class="flex justify-center gap-8 mb-8">
-                <a href="mailto:DNVRConcretellc@gmail.com" class="text-slate-400 hover:text-orange-500 font-semibold">Email Us</a>
-                <a href="#" class="text-slate-400 hover:text-orange-500 font-semibold">Instagram</a>
-                <a href="#" class="text-slate-400 hover:text-orange-500 font-semibold">Facebook</a>
+            <div class="flex flex-col items-center gap-4 mb-8">
+                <div class="font-black text-xl tracking-tighter">DNVR CONCRETE <span class="text-orange-600">LLC</span></div>
+                <div class="flex gap-6 text-xs font-bold text-slate-500 uppercase tracking-widest">
+                    <a href="mailto:DNVRConcretellc@gmail.com" class="hover:text-orange-600">DNVRConcretellc@gmail.com</a>
+                    <a href="tel:7202431972" class="hover:text-orange-600">(720) 243-1972</a>
+                </div>
             </div>
-            <p class="text-xs text-slate-400 uppercase tracking-widest">&copy; 2026 DNVR Concrete LLC. Always Open.</p>
+            <p class="text-[10px] text-slate-400 uppercase tracking-[0.2em]">&copy; 2026 DNVR CONCRETE LLC. Denver, CO. All rights reserved.</p>
         </div>
     </footer>
 
