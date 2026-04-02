@@ -1,145 +1,155 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DNVR Concrete LLC | Denver's Premier Concrete Contracting</title>
-    <meta name="description" content="5-Star rated, family-owned concrete experts serving Denver and surrounding areas. Specializing in high-durability Patios, Driveways, Sidewalks, and Custom Work.">
-    
+    <title>DNVR Concrete LLC | Denver Concrete Contractors</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
-    
     <style>
-        body { font-family: 'Inter', sans-serif; }
-        h1, h2, h3, .brand-font { font-family: 'Montserrat', sans-serif; }
-        .hover-lift { transition: transform 0.2s ease-out; }
-        .hover-lift:hover { transform: translateY(-3px); }
-        @media (min-width: 1024px) {
-            .rugged-clip { clip-path: polygon(5% 0, 100% 0%, 95% 100%, 0% 100%); }
-        }
+        /* Using standard system fonts for a clean, traditional corporate look */
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900 antialiased">
+<body class="bg-gray-50 text-gray-800">
 
-    <header class="fixed w-full z-50 bg-white border-b border-slate-100 shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <a href="#" class="flex items-center gap-3">
-                    <div class="w-11 h-11 bg-slate-900 flex items-center justify-center rounded shadow-inner">
-                        <span class="text-white font-black text-xs tracking-tighter italic">DNVR</span>
-                    </div>
-                    <div class="leading-none">
-                        <span class="brand-font text-2xl font-black uppercase tracking-tighter text-slate-900">CONCRETE <span class="text-orange-600">LLC</span></span>
-                    </div>
-                </a>
-                <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold uppercase tracking-widest text-slate-600">
-                    <a href="#services" class="hover:text-orange-600 transition">Services</a>
-                    <a href="#about" class="hover:text-orange-600 transition">About</a>
-                    <a href="#showcase" class="hover:text-orange-600 transition">Our Work</a>
-                </nav>
-                <a href="tel:7202431972" class="bg-slate-900 text-white px-6 py-3 rounded-md font-bold text-sm hover:bg-orange-600 transition shadow-lg">
-                    (720) 243-1972
-                </a>
+    <div class="bg-gray-900 text-gray-300 py-2 text-sm">
+        <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
+            <div>📍 Serving Denver & Surrounding Areas | ⭐ 5-Star Rated</div>
+            <div class="hidden sm:block">Family-Owned & Operated | Always Open</div>
+        </div>
+    </div>
+
+    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="bg-gray-900 text-white font-bold px-2 py-1 rounded text-sm">DNVR</div>
+                <div class="font-bold text-xl uppercase tracking-tight text-gray-900">Concrete LLC</div>
+            </div>
+            <div class="hidden md:flex gap-6 font-semibold text-sm text-gray-600">
+                <a href="#services" class="hover:text-blue-600">Services</a>
+                <a href="#projects" class="hover:text-blue-600">Projects</a>
+                <a href="#about" class="hover:text-blue-600">About Us</a>
+            </div>
+            <a href="tel:7202431972" class="bg-blue-600 text-white px-5 py-2 rounded font-bold text-sm hover:bg-blue-700 transition">
+                Call (720) 243-1972
+            </a>
+        </div>
+    </nav>
+
+    <header class="relative bg-gray-900 text-white">
+        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dea?auto=format&fit=crop&q=80&w=1600" 
+             onerror="this.src='https://placehold.co/1600x600/1f2937/ffffff?text=Image+Blocked+by+Browser'"
+             alt="Concrete workers on job site" 
+             class="absolute inset-0 w-full h-full object-cover opacity-40">
+        
+        <div class="relative max-w-6xl mx-auto px-4 py-24 md:py-32">
+            <div class="max-w-2xl">
+                <h1 class="text-3xl md:text-5xl font-bold mb-4 leading-tight">Professional Concrete Services in Denver.</h1>
+                <p class="text-base md:text-lg mb-8 text-gray-200">
+                    From heavy-duty driveways to custom backyard patios, we deliver high-quality, durable concrete work designed to survive Colorado weather. 
+                </p>
+                <div class="flex gap-4">
+                    <a href="#contact" class="bg-blue-600 text-white px-6 py-3 rounded font-bold text-sm hover:bg-blue-700 transition">
+                        Request a Free Quote
+                    </a>
+                    <a href="sms:+17202431972" class="bg-white text-gray-900 px-6 py-3 rounded font-bold text-sm hover:bg-gray-100 transition">
+                        Text "READY"
+                    </a>
+                </div>
             </div>
         </div>
     </header>
 
-    <section class="relative pt-28 pb-16 lg:pt-40 lg:pb-32 overflow-hidden bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-                <div class="text-center lg:text-left">
-                    <div class="inline-flex items-center gap-2 px-3 py-1 bg-orange-100 text-orange-700 rounded-full mb-6 border border-orange-200">
-                        <span class="font-bold text-xs uppercase tracking-widest">⭐ 5-Star Rated by Local Homeowners</span>
-                    </div>
-                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-black leading-[1] text-slate-900 mb-6 tracking-tighter">
-                        Colorado Built. <br><span class="text-orange-600">Mile High</span> Quality.
-                    </h1>
-                    <p class="text-base md:text-lg text-slate-700 mb-10 max-w-xl mx-auto lg:mx-0 font-medium">
-                        Your foundation matters. DNVR Concrete LLC delivers heavy-duty patios, driveways, and custom flatwork designed specifically to withstand the Colorado freeze-thaw cycles.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4 items-center justify-center lg:justify-start">
-                        <a href="#contact" class="w-full sm:w-auto bg-slate-900 text-white text-center px-10 py-5 rounded-md font-bold text-lg hover:shadow-2xl transition shadow-xl">
-                            Get a Free Quote
-                        </a>
-                    </div>
-                </div>
-                <div class="relative w-full h-[350px] lg:h-[500px] rounded-lg shadow-2xl rugged-clip overflow-hidden bg-slate-800">
-                    <svg class="w-full h-full text-slate-700" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none">
-                        <defs>
-                            <pattern id="hero-pattern" width="20" height="20" patternUnits="userSpaceOnUse">
-                                <path d="M0 0h20v20H0z" fill="#1e293b"/>
-                                <path d="M0 0l20 20M20 0L0 20" stroke="#334155" stroke-width="1"/>
-                            </pattern>
-                        </defs>
-                        <rect width="100%" height="100%" fill="url(#hero-pattern)" />
-                        <text x="50" y="50" dominant-baseline="middle" text-anchor="middle" font-family="Montserrat" font-size="6" font-weight="900" fill="#cbd5e1" opacity="0.5">[HERO IMAGE GOES HERE]</text>
-                        <text x="50" y="60" dominant-baseline="middle" text-anchor="middle" font-family="Inter" font-size="3" font-weight="600" fill="#94a3b8" opacity="0.5">e.g., Active Concrete Pour / Patio</text>
-                    </svg>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="py-24 bg-white border-t border-slate-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <div class="order-2 lg:order-1 relative w-full h-[400px] rounded-lg shadow-xl overflow-hidden bg-slate-200">
-                     <svg class="w-full h-full" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none">
-                        <defs>
-                            <pattern id="trust-pattern" width="10" height="10" patternUnits="userSpaceOnUse">
-                                <circle cx="5" cy="5" r="2" fill="#cbd5e1" />
-                            </pattern>
-                        </defs>
-                        <rect width="100%" height="100%" fill="#f1f5f9"/>
-                        <rect width="100%" height="100%" fill="url(#trust-pattern)" opacity="0.5"/>
-                        <text x="50" y="50" dominant-baseline="middle" text-anchor="middle" font-family="Montserrat" font-size="6" font-weight="900" fill="#64748b" opacity="0.5">[ABOUT IMAGE GOES HERE]</text>
-                    </svg>
-                </div>
-                <div class="order-1 lg:order-2">
-                    <h2 class="brand-font text-5xl font-black text-slate-900 tracking-tighter leading-none mb-6">LOCAL. FAMILY. <br>5-STAR SERVICE.</h2>
-                    <p class="text-slate-700 mb-8 font-medium leading-relaxed">As a local, family-owned business, we don't cut corners. We treat every pour in Denver and surrounding areas as if it were our own property—focusing on precision, clean edges, and structural durability.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="showcase" class="py-24 bg-slate-900 text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="brand-font text-4xl font-black tracking-tighter text-white">RECENT PROJECTS</h2>
+    <section id="services" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Our Concrete Services</h2>
+                <p class="text-gray-600 text-sm md:text-base">Reliable flatwork for residential and commercial properties.</p>
             </div>
             
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="relative aspect-[4/3] rounded-lg shadow-lg overflow-hidden bg-slate-800 border border-slate-700">
-                    <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                        <rect width="100%" height="100%" fill="#1e293b"/>
-                        <text x="50" y="50" dominant-baseline="middle" text-anchor="middle" font-family="Montserrat" font-size="8" font-weight="900" fill="#475569">[PROJECT 1]</text>
-                    </svg>
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent p-5 flex flex-col justify-end pointer-events-none">
-                        <span class="font-bold text-lg text-white">Custom Patios</span>
-                    </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="border border-gray-200 p-6 rounded-lg bg-gray-50">
+                    <h3 class="font-bold text-lg mb-2 text-gray-900">Patios</h3>
+                    <p class="text-sm text-gray-600">Custom outdoor living spaces. We offer standard broom finishes, stamping, and coloring to match your home's aesthetic.</p>
                 </div>
-                <div class="relative aspect-[4/3] rounded-lg shadow-lg overflow-hidden bg-slate-800 border border-slate-700">
-                    <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                        <rect width="100%" height="100%" fill="#1e293b"/>
-                        <text x="50" y="50" dominant-baseline="middle" text-anchor="middle" font-family="Montserrat" font-size="8" font-weight="900" fill="#475569">[PROJECT 2]</text>
-                    </svg>
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent p-5 flex flex-col justify-end pointer-events-none">
-                        <span class="font-bold text-lg text-white">Driveways</span>
-                    </div>
+                <div class="border border-gray-200 p-6 rounded-lg bg-gray-50">
+                    <h3 class="font-bold text-lg mb-2 text-gray-900">Driveways</h3>
+                    <p class="text-sm text-gray-600">Reinforced concrete driveways built to withstand heavy vehicles and harsh freeze-thaw cycles without premature cracking.</p>
                 </div>
-                <div class="relative aspect-[4/3] rounded-lg shadow-lg overflow-hidden bg-slate-800 border border-slate-700 sm:col-span-2 lg:col-span-1">
-                    <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                        <rect width="100%" height="100%" fill="#1e293b"/>
-                        <text x="50" y="50" dominant-baseline="middle" text-anchor="middle" font-family="Montserrat" font-size="8" font-weight="900" fill="#475569">[PROJECT 3]</text>
-                    </svg>
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent p-5 flex flex-col justify-end pointer-events-none">
-                        <span class="font-bold text-lg text-white">Custom Finishes</span>
-                    </div>
+                <div class="border border-gray-200 p-6 rounded-lg bg-gray-50">
+                    <h3 class="font-bold text-lg mb-2 text-gray-900">Sidewalks & Steps</h3>
+                    <p class="text-sm text-gray-600">Safe, code-compliant walkways and custom steps to improve your property's curb appeal and accessibility.</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <section id="projects" class="py-16 bg-gray-100 border-y border-gray-200">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-2xl font-bold text-gray-900 mb-8">Recent Projects</h2>
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=600" 
+                     onerror="this.src='https://placehold.co/600x400/eeeeee/999999?text=Image+Blocked+by+Browser'"
+                     alt="Concrete Patio" 
+                     class="w-full h-48 object-cover rounded shadow-sm border border-gray-200">
+                <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=600" 
+                     onerror="this.src='https://placehold.co/600x400/eeeeee/999999?text=Image+Blocked+by+Browser'"
+                     alt="Concrete Driveway" 
+                     class="w-full h-48 object-cover rounded shadow-sm border border-gray-200">
+                <img src="https://images.unsplash.com/photo-1541888946425-d81bb1930060?auto=format&fit=crop&q=80&w=600" 
+                     onerror="this.src='https://placehold.co/600x400/eeeeee/999999?text=Image+Blocked+by+Browser'"
+                     alt="Concrete Finishing Work" 
+                     class="w-full h-48 object-cover rounded shadow-sm border border-gray-200">
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12">
+            <div>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">Why Choose DNVR Concrete?</h2>
+                <p class="text-gray-600 text-sm md:text-base mb-6 leading-relaxed">
+                    We are a family-owned concrete contractor proudly serving Denver, Colorado, and the surrounding suburbs. Our reputation is built on reliability, transparent pricing, and structurally sound workmanship.
+                </p>
+                <ul class="text-sm font-semibold text-gray-800 space-y-2 mb-8">
+                    <li>✓ 5-Star Rated by Local Homeowners</li>
+                    <li>✓ Fully Licensed & Insured</li>
+                    <li>✓ Owner On-Site for Every Pour</li>
+                </ul>
+                <div class="bg-gray-50 border border-gray-200 p-4 rounded text-sm">
+                    <strong>Contact Information</strong><br>
+                    Email: DNVRConcretellc@gmail.com<br>
+                    Phone: (720) 243-1972<br>
+                    Hours: Always Open
+                </div>
+            </div>
+
+            <div id="contact" class="bg-gray-900 p-6 md:p-8 rounded-lg text-white shadow-lg">
+                <h3 class="text-xl font-bold mb-4">Get a Free Estimate</h3>
+                <form action="#" class="space-y-4 text-sm">
+                    <div>
+                        <label class="block text-gray-300 mb-1">Name</label>
+                        <input type="text" class="w-full p-2 rounded bg-gray-800 border border-gray-700 text-white focus:outline-none focus:border-blue-500" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-300 mb-1">Phone Number</label>
+                        <input type="tel" class="w-full p-2 rounded bg-gray-800 border border-gray-700 text-white focus:outline-none focus:border-blue-500" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-300 mb-1">Project Details</label>
+                        <textarea rows="3" class="w-full p-2 rounded bg-gray-800 border border-gray-700 text-white focus:outline-none focus:border-blue-500" placeholder="e.g., I need a new 20x20 patio..."></textarea>
+                    </div>
+                    <button class="w-full bg-blue-600 hover:bg-blue-700 py-3 rounded font-bold transition">Submit Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-400 py-8 border-t border-gray-800 text-center text-xs">
+        <div class="max-w-6xl mx-auto px-4">
+            <p>&copy; 2026 DNVR Concrete LLC. All Rights Reserved.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
