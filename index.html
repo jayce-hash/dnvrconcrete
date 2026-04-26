@@ -57,7 +57,7 @@
             margin: 0 auto;
         }
 
-        /* --- Header (Glassmorphism) --- */
+        /* --- Header --- */
         header {
             background: rgba(255, 255, 255, 0.9);
             backdrop-filter: blur(12px);
@@ -135,15 +135,16 @@
             box-shadow: 0 8px 25px rgba(15, 48, 87, 0.3);
         }
 
-        /* --- Hero Section --- */
+        /* --- Hero Section (Sharp Edge) --- */
         .hero {
             padding: 11rem 0 8rem;
-            background: radial-gradient(circle at 90% 10%, rgba(0, 136, 204, 0.1) 0%, transparent 40%),
-                        radial-gradient(circle at 10% 90%, rgba(50, 129, 62, 0.1) 0%, transparent 40%),
+            background: radial-gradient(circle at 90% 10%, rgba(0, 136, 204, 0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 10% 90%, rgba(50, 129, 62, 0.15) 0%, transparent 50%),
                         var(--brand-navy);
             color: var(--white);
             position: relative;
             text-align: center;
+            border-bottom: 8px solid var(--brand-green); /* Sharp, decisive transition */
         }
 
         .hero h1 {
@@ -192,26 +193,9 @@
             color: var(--brand-green-light);
         }
 
-        /* Wave Divider */
-        .wave-divider {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            line-height: 0;
-            transform: translateY(1px);
-        }
-        
-        .wave-divider svg {
-            display: block;
-            width: calc(100% + 1.3px);
-            height: 60px;
-        }
-        .wave-divider .shape-fill { fill: var(--bg-offwhite); }
-
-        /* --- The 3 Pillars (Audiences) --- */
+        /* --- The 3 Pillars --- */
         .pillars {
-            padding: 4rem 0 6rem;
+            padding: 5rem 0;
             background: var(--bg-offwhite);
         }
 
@@ -242,7 +226,7 @@
             font-size: var(--text-base);
         }
 
-        /* --- Founder Bio Section --- */
+        /* --- Founder Bio Section (Upgraded for Photo) --- */
         .bio-section {
             padding: 6rem 0;
             background: var(--white);
@@ -255,41 +239,82 @@
             grid-template-columns: 1fr;
             gap: 3rem;
             align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
         }
 
         @media(min-width: 900px) {
-            .bio-grid { grid-template-columns: 1fr 1.5fr; }
+            .bio-grid { 
+                grid-template-columns: 350px 1fr; 
+                gap: 5rem; 
+            }
+        }
+
+        /* Image Placeholder Styling */
+        .bio-image-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 350px;
+            margin: 0 auto;
+        }
+
+        .bio-image-wrapper::before {
+            content: '';
+            position: absolute;
+            top: -15px; left: -15px; right: -15px; bottom: -15px;
+            border-radius: 50%;
+            border: 2px dashed rgba(50, 129, 62, 0.3); /* Subtle outer ring */
+            z-index: 0;
+            animation: spin 30s linear infinite;
+        }
+
+        @keyframes spin { 100% { transform: rotate(360deg); } }
+
+        .bio-photo {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1/1; /* Keeps it a perfect square/circle */
+            border-radius: 50%;
+            object-fit: cover;
+            border: 8px solid var(--brand-green); /* Replicates the green ring from his original photo */
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+            background-color: var(--bg-offwhite); /* Background color if image fails to load */
+        }
+
+        .bio-content-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         .bio-title h2 {
             font-size: var(--text-3xl);
             color: var(--brand-navy);
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.25rem;
         }
 
         .bio-title .subtitle {
             font-size: var(--text-lg);
             color: var(--brand-green);
             font-weight: 600;
-        }
-
-        .bio-content {
-            border-left: 4px solid var(--brand-green);
-            padding-left: 2rem;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .bio-content p {
             font-size: var(--text-lg);
             color: var(--text-muted);
             line-height: 1.8;
+            margin-bottom: 1rem;
         }
 
-        .bio-content p strong {
+        .bio-content strong {
             color: var(--brand-navy);
             font-family: 'Playfair Display', serif;
             font-size: var(--text-xl);
-            display: block;
-            margin-bottom: 1rem;
         }
 
         /* --- Comprehensive Services --- */
@@ -413,8 +438,9 @@
         }
 
         @media (max-width: 768px) {
-            .header-actions { display: none; } /* Simplified mobile header */
-            .hero { padding: 8rem 0 6rem; }
+            .header-actions { display: none; }
+            .hero { padding: 9rem 0 6rem; }
+            .bio-grid { text-align: center; }
         }
     </style>
 </head>
@@ -443,12 +469,6 @@
             <h1>Finding Safe Care Solutions <span class="highlight">Fast.</span></h1>
             <p>Expert, compassionate guidance for assisted living, memory care, and hospital discharge. Connecting communities with appropriate residents aligned with their exact level of care.</p>
         </div>
-        
-        <div class="wave-divider">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,115.34,188.4,103.55,234.3,94.13,280.27,73.5,321.39,56.44Z" class="shape-fill"></path>
-            </svg>
-        </div>
     </section>
 
     <section class="pillars">
@@ -470,14 +490,23 @@
 
     <section class="bio-section">
         <div class="container bio-grid">
-            <div class="bio-title">
-                <h2>Meet Rich Young</h2>
-                <p class="subtitle">Placement Specialist & Founder</p>
+            
+            <div class="bio-image-wrapper">
+                <img src="PLACE_YOUR_IMAGE_LINK_HERE.jpg" alt="Rich Young - Placement Specialist" class="bio-photo">
             </div>
-            <div class="bio-content">
-                <p><strong>"Hi, I'm Rich Young."</strong>
-                I help families when a loved one can no longer remain safely at home. With extensive professional experience in senior care, hospice, discharge planning, and placement coordination, I guide families through urgent transitions with empathy and absolute clarity. My goal is to completely remove the overwhelming burden of finding the right facility, so you can focus on what matters most.</p>
+
+            <div class="bio-content-wrapper">
+                <div class="bio-title">
+                    <h2>Meet Rich Young</h2>
+                    <p class="subtitle">Placement Specialist & Founder</p>
+                </div>
+                <div class="bio-content">
+                    <p><strong>"Hi, I'm Rich Young."</strong></p>
+                    <p>I help families when a loved one can no longer remain safely at home. With extensive professional experience in senior care, hospice, discharge planning, and placement coordination, I guide families through urgent transitions with empathy and absolute clarity.</p>
+                    <p>My goal is to completely remove the overwhelming burden of finding the right facility, so you can focus on what matters most.</p>
+                </div>
             </div>
+
         </div>
     </section>
 
